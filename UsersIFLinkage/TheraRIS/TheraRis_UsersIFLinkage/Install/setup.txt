@@ -1,0 +1,6 @@
+<セットアップ手順>
+1) install.bat/uninstall.batを開き、6行目cdのパスを、install.bat/uninstall.batが置いてあるパスに設定しなおし保存してください。
+
+2) install.bat/uninstall.batを実行する場合は、右クリック→『管理者として実行』してください。
+
+インストールが完了しましたら、『サービス』を起動し、『UsersIFLinkageService』を選択し右クリックプロパティを開き、『スタートアップの種類』を変更した上でサービスを開始してください。

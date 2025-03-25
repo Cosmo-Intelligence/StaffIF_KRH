@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <!-- (SYOKUIN_KBN が設定値である ) かつ ( SECTION_ID が設定値である) に当てはまるユーザをレコード登録します。 -->
+  <!-- SYOKUIN_KBNおよびSECTION_IDは、複数の設定値を指定できます。複数指定する場合は","カンマで区切ってください。 -->
+  <!-- value="" とすると、該当項目の絞込み条件を付けずに、ユーザ情報を抽出しレコード登録対象となります。 -->
+
+  <!-- *********************************************************************** -->
+    <!-- [EC1] UserManage, UserInfo_CA へ登録する ユーザの絞り込み条件 -->
+    <EC01 id="SYOKUIN_KBN" value=""/>
+    <EC01 id="SECTION_ID" value=""/>
+
+  <!-- *********************************************************************** -->
+    <!-- [EC2] UserAppManage, AttrManage へ登録する ユーザの絞り込み条件 -->
+    <!-- 設定可能項目の見本 EC02 id="APPCODE" value="ServAdWeb,UserManage,EPVR,EPVC,EPRT,Report,RPWeb,RIS,TheraRIS,NEXTAS,SCOPE,Mono"/ -->
+    <!-- 大文字/小文字を区別して識別します。 -->
+    <EC02 id="APPCODE" value="Report,RPWeb"/>
+    <!-- 以下左ノード名=EC02_$(APPCODE) です。$(APPCODE) の部分は、上記 APPCCODE と大文字/小文字を区別して識別し一致する必要があります。 -->
+      <!-- +++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- [EC2] Report の 利用ユーザの絞り込み条件(設定値が空文字""の場合は絞り込み条件無しになります。) -->
+      <EC02_Report id="SYOKUIN_KBN" value=""/>
+      <EC02_Report id="SECTION_ID" value=""/>
+      <!-- +++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- [EC2] RPWeb の 利用ユーザの絞り込み条件(設定値が空文字""の場合は絞り込み条件無しになります。) -->
+      <EC02_RPWeb id="SYOKUIN_KBN" value=""/>
+      <EC02_RPWeb id="SECTION_ID" value=""/>
+      <!-- +++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- [EC2] $(APPCODE) の 利用ユーザの絞り込み条件(設定値が空文字""の場合は絞り込み条件無しになります。) -->
+      <!-- <EC02_$(APPCODE) id="SYOKUIN_KBN" value=""/> -->
+      <!-- <EC02_$(APPCODE) id="SECTION_ID" value=""/> -->
+
+  <!-- *********************************************************************** -->
+    <!-- [EC3] MRMS.REQUESTDOCTORMASTER へ登録する ユーザの絞り込み条件 -->
+    <EC03 id="SYOKUIN_KBN" value=""/>
+    <EC03 id="SECTION_ID" value=""/>
+
+  <!-- *********************************************************************** -->
+    <!-- [UPD] 更新項目名の定義 -->
+    <!-- id=出力テーブル名, value=項目名(フィールドの物理名)列挙(カンマ区切り) ※全て大文字で指定してください。-->
+    <!-- USERMANAGE -->
+    <!-- 設定可能項目の見本 (更新しない場合は空文字を設定して下さい。)
+				  <UPD id="USERMANAGE" value="PASSWORD,USERNAME,USERNAMEENG,PASSWORDEXPIRYDATE,PASSWORDWARNINGDATE,USERIDVALIDITYFLAG"/> -->
+    <UPD id="USERMANAGE" value="PASSWORD,USERNAME,USERNAMEENG,PASSWORDEXPIRYDATE,PASSWORDWARNINGDATE,USERIDVALIDITYFLAG"/>
+    <!-- +++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- MRMS.REQUESTDOCTORMASTER -->
+    <!-- 設定可能項目の見本 (更新しない場合は空文字を設定して下さい。)
+				  <UPD id="MRMS.REQUESTDOCTORMASTER" value=""/> -->
+    <UPD id="MRMS.REQUESTDOCTORMASTER" value=""/>
+
+</configuration>
