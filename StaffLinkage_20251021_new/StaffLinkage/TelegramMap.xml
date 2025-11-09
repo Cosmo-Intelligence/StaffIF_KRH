@@ -3,21 +3,20 @@
   <!-- *********************************************************************** -->
   <!-- 利用者情報:項目定義 -->
   <!-- id="項目名" value="開始位置[Byte目]|データ長[Byte]" -->
-  <EYBNWGCP id="RID" value="1|8"/>
-
-  <EYBNWGCP id="PASSWORDW" value="9|64"/><!--■id変更不可■特殊仕様アリ：復号化-->
-  <EYBNWGCP id="NAMEN" value="73|20"/><!--■id変更不可■特殊仕様アリ：旧漢字変換-->
-  <EYBNWGCP id="NAMEE" value="133|40"/>
-  <EYBNWGCP id="P_BEL" value="262|20"/>
-  <EYBNWGCP id="SYOKUKBN" value="282|3"/><!--■id変更不可■特殊仕様アリ：設定ファイルによる変換-->
-  <EYBNWGCP id="TNT_1_KA" value="323|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
-  <EYBNWGCP id="TNT_2_KA" value="371|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
-  <EYBNWGCP id="TNT_3_KA" value="419|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
-  <EYBNWGCP id="TNT_4_KA" value="467|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
-  <EYBNWGCP id="TNT_5_KA" value="515|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
-  <EYBNWGCP id="YUKO_ED" value="1086|8"/><!--■id変更不可■特殊仕様アリ：有効期限関連-->
-  <EYBNWGCP id="UPD_YMD" value="1102|8"/><!--■id変更不可■特殊仕様アリ：取込対象期間の基準-->
-  <EYBNWGCP id="STP_FLG" value="1142|1"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="RID" value="2|8"/>
+  <EYBNWGCP id="PASSWORDW" value="14|192"/><!--■id変更不可■特殊仕様アリ：復号化-->
+  <EYBNWGCP id="NAMEN" value="208|20"/><!--■id変更不可■特殊仕様アリ：旧漢字変換-->
+  <EYBNWGCP id="NAMEE" value="231|40"/>
+  <EYBNWGCP id="P_BEL" value="274|40"/>
+  <EYBNWGCP id="SYOKUKBN" value="438|3"/><!--■id変更不可■特殊仕様アリ：設定ファイルによる変換-->
+  <EYBNWGCP id="TNT_1_KA" value="548|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="TNT_2_KA" value="594|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="TNT_3_KA" value="640|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="TNT_4_KA" value="686|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="TNT_5_KA" value="732|3"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
+  <EYBNWGCP id="YUKO_ED" value="1322|8"/><!--■id変更不可■特殊仕様アリ：有効期限関連-->
+  <EYBNWGCP id="UPD_YMD" value="1322|8"/><!--■id変更不可■特殊仕様アリ：取込対象期間の基準-->
+  <EYBNWGCP id="STP_FLG" value="1333|1"/><!--■id変更不可■特殊仕様アリ：項目特殊編集-->
 
   <!-- *********************************************************************** -->
   <!-- ToUsersInfo;対応項目 -->

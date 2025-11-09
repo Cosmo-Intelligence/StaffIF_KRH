@@ -98,6 +98,21 @@ namespace StaffLinkage.Util
 
       return args[1].ToLower();
     }
-
-  }
+        /// <summary>
+        /// int?変換
+        /// </summary>
+        /// <param name="value"></param>
+        public static int? ConvertStrToInt(string value)
+        {
+            int ret = 0;
+            if (int.TryParse(value, out ret))
+            {
+                return ret;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 }

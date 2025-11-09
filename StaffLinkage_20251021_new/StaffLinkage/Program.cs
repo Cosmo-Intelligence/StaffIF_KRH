@@ -275,6 +275,7 @@ namespace StaffLinkage
             if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.MRMS_GAIJI_REPLACE, table))       { return false; }
             if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.MRMS_USERMANAGE_UPD_COLS, table)) { return false; }
 			if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.MRMS_CONVERT_LICENCETOUSE, table)) { return false; }
+            if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.MRMS_USERINFO_CA_ATTRIBUTE_DEFAULT, table)) { return false; }
 
             // RIS項目
             if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.RRIS_CONVERT_MD5, table))         { return false; }
@@ -305,7 +306,10 @@ namespace StaffLinkage
             if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.RTRIS_GAIJI_REPLACE, table))       { return false; }
             if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.RTRIS_USERMANAGE_UPD_COLS, table)) { return false; }
 
-      return true;
+            // 有効終了日 ※登録・更新対象のデータ判断用
+            if (!CommonUtil.getNotEmptyAppConfigValue(AppConfigParameter.YUKO_YMD, table)) { return false; }
+
+            return true;
     }
             /// <summary>
         /// SQ登録対象のUnicode文字リストセット

@@ -59,8 +59,8 @@ namespace UsersIFLinkage.Data.Import
                 usermanage.Updatedatetime = ImportUtil.SYSDATE;
                 usermanage.Qualifiedpersonflag = REPORT_MRMS_UserManageEntity.QUALIFIEDPERSONFLAG;
                 // 2025.02.xx Mod Cosmo＠Yamamoto Start   自衛隊札幌病院改修対応
-                usermanage.Joinusername = null;
-                usermanage.Joinusercode = null;
+                usermanage.Jointusername = null;
+                usermanage.Jointusercode = null;
                 // 2025.02.xx Mod Cosmo＠Yamamoto End   自衛隊札幌病院改修対応
 
                 // データをログに出力
@@ -107,8 +107,8 @@ namespace UsersIFLinkage.Data.Import
                                 OracleDataBase.SingleQuotes(usermanage.Maingroupid),
                                 OracleDataBase.SingleQuotes(usermanage.Subgroupidlist),
                                 // 2025.02.xx Mod Cosmo＠Yamamoto Start   自衛隊札幌病院改修対応
-                                OracleDataBase.SingleQuotes(usermanage.Joinusername),
-                                OracleDataBase.SingleQuotes(usermanage.Joinusercode),
+                                OracleDataBase.SingleQuotes(usermanage.Jointusername),
+                                OracleDataBase.SingleQuotes(usermanage.Jointusercode),
                                 // 2025.02.xx Mod Cosmo＠Yamamoto End   自衛隊札幌病院改修対応
                                 usermanage.Updatedatetime,
                                 usermanage.Qualifiedpersonflag,

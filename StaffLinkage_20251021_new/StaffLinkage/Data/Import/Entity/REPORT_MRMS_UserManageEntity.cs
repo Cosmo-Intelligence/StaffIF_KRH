@@ -214,7 +214,7 @@ namespace UsersIFLinkage.Data.Import.Entity
         /// <summary>
         /// 
         /// </summary>
-        public string Joinusername
+        public string Jointusername
         {
             get { return maingroupid; }
             set { maingroupid = value; }
@@ -223,7 +223,7 @@ namespace UsersIFLinkage.Data.Import.Entity
         /// <summary>
         /// 
         /// </summary>
-        public string Joinusercode
+        public string Jointusercode
         {
             get { return maingroupid; }
             set { maingroupid = value; }

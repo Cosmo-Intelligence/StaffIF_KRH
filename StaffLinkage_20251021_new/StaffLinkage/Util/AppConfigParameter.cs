@@ -210,6 +210,16 @@ namespace StaffLinkage.Util
 		/// </summary>
 		public static string MRMS_CONVERT_LICENCETOUSE = "MRMS_CONVERT_LICENCETOUSE";
 
+        /// <summary>
+        /// USERINFO_CA.ATTRIBUTE:ｸﾞﾙｰﾌﾟID（=GROUPMASTER.ID）デフォルト値
+        /// </summary>
+        public static string MRMS_USERINFO_CA_ATTRIBUTE_DEFAULT = "MRMS_USERINFO_CA_ATTRIBUTE_DEFAULT";
+
+        /// <summary>
+        /// USERINFO_CA.ATTRIBUTE:ｸﾞﾙｰﾌﾟID（=GROUPMASTER.ID）職員区分値
+        /// </summary>
+        public static string MRMS_USERINFO_CA_ATTRIBUTE = "MRMS_USERINFO_CA_ATTRIBUTE_";
+
         #endregion
 
         #region RIS設定
@@ -315,6 +325,11 @@ namespace StaffLinkage.Util
         /// RTRISユーザ管理更新対象カラム
         /// </summary>
         public static string RTRIS_USERMANAGE_UPD_COLS = "RTRIS_USERMANAGE_UPD_COLS";
+
+        /// <summary>
+	    /// 有効終了日 ※登録・更新対象のデータ判断用
+        /// </summary>
+        public static string YUKO_YMD = "YUKO_YMD";
 
         #endregion
 

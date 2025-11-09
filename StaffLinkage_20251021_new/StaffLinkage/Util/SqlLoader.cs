@@ -168,8 +168,7 @@ namespace StaffLinkage.Util
       process = new Process();
       // SQLLoaderの準備
       process.StartInfo.WorkingDirectory = Application.StartupPath;
-      //process.StartInfo.FileName = "sqlldr.exe";
-      process.StartInfo.FileName = @"C:\app\client\cosmo\product\12.1.0\client_1\BIN\sqlldr.exe";
+      process.StartInfo.FileName = "sqlldr.exe";
             // Y_Higuchi -- add --
             process.StartInfo.Arguments = strArgs;
       // Y_Higuchi -- add --

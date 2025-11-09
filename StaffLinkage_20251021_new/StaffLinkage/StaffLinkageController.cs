@@ -49,10 +49,15 @@ namespace StaffLinkage
     private static DateTime today = DateTime.Today;
 
     /// <summary>
+    /// 有効終了日 
+    /// </summary>
+    private static string yuko_ymd = AppConfigController.GetInstance().GetValueString(AppConfigParameter.YUKO_YMD);
+
+    /// <summary>
     /// 実行処理
     /// </summary>
     /// <returns>正常ならtrue、異常ならfalse</returns>
-    public bool Execute()
+        public bool Execute()
     {
       _log.Info("初期処理を実行します。");
       // 初期処理
@@ -307,8 +312,10 @@ namespace StaffLinkage
         // Y_Higuchi -- add --
         string strbuf = "";
         // 次回取込期間 = 前回実行日から１年間
-        strbuf = DateTime.Now.ToString(modymdFormat) + "-" + DateTime.Now.AddYears(1).ToString(modymdFormat);
-        sw.Write(strbuf);
+        //strbuf = DateTime.Now.ToString(modymdFormat) + "-" + DateTime.Now.AddYears(1).ToString(modymdFormat);
+        // 次回取込期間 = 設定ファイルから取得
+        strbuf = DateTime.Now.ToString(modymdFormat) + "-" + yuko_ymd;
+                sw.Write(strbuf);
         // Y_Higuchi -- add --
         // Y_Higuchi -- del --
         // sw.Write(DateTime.Now.ToString(modymdFormat));

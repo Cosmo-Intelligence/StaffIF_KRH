@@ -5,6 +5,7 @@ using UsersIFLinkage.Data.Export.Entity;
 using UsersIFLinkage.Data.Import.Common;
 using UsersIFLinkage.Data.Import.Entity;
 using StaffLinkage.Util;
+using System.Configuration;
 
 namespace UsersIFLinkage.Data.Import
 {
@@ -17,6 +18,12 @@ namespace UsersIFLinkage.Data.Import
         /// </summary>
         private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(
                 MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// <summary>
+        /// 設定ファイル：USERINFO_CA.ATTRIBUTE:ｸﾞﾙｰﾌﾟID（=GROUPMASTER.ID）デフォルト値
+        /// </summary>
+        private static string attribute =
+                AppConfigController.GetInstance().GetValueString(AppConfigParameter.MRMS_USERINFO_CA_ATTRIBUTE_DEFAULT);
 
         #endregion
 
@@ -36,7 +43,16 @@ namespace UsersIFLinkage.Data.Import
                 userinfoca.Id = "1";
                 userinfoca.Loginid = tousersRow[ToUsersInfoEntity.F_USERID].ToString();
                 userinfoca.Hospitalid = tousersRow[ToUsersInfoEntity.F_HOSPITALID].ToString();
-                userinfoca.Attribute = REPORT_MRMS_UserInfo_CAEntity.ATTRIBUTE;
+                //userinfoca.Attribute = REPORT_MRMS_UserInfo_CAEntity.ATTRIBUTE;
+                userinfoca.Attribute = CommonUtil.ConvertStrToInt(
+                                             ConfigurationManager.AppSettings[
+                                                 AppConfigParameter.MRMS_USERINFO_CA_ATTRIBUTE
+                                                 + tousersRow[ToUsersInfoEntity.F_SYOKUIN_KBN].ToString()]);
+                if (userinfoca.Attribute == null)
+                {
+                    // 取得できなかった場合はDEFAULT設定
+                    userinfoca.Attribute = CommonUtil.ConvertStrToInt(attribute);
+                }
                 userinfoca.Showorder = "1";
                 userinfoca.Language = REPORT_MRMS_UserInfo_CAEntity.LANGUAGE;
                 userinfoca.Updatedatetime = ImportUtil.SYSDATE;
